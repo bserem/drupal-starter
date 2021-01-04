@@ -11,7 +11,7 @@ _core:
 id: server_theme_help
 theme: server_theme
 region: content
-weight: -30
+weight: -3
 provider: null
 plugin: help_block
 settings:

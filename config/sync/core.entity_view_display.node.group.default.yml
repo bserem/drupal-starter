@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.group.body
     - node.type.group
   module:
-    - og
+    - og_polite_subscriber
     - text
     - user
 id: node.group.default
@@ -23,12 +23,12 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   og_group:
     weight: 0
-    type: og_group_subscribe
+    type: og_polite_subscribe
     region: content
     label: above
     settings: {  }

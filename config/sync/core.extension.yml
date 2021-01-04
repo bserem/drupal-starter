@@ -26,6 +26,7 @@ module:
   menu_ui: 0
   node: 0
   og: 0
+  og_polite_subscriber: 0
   og_ui: 0
   options: 0
   page_cache: 0
