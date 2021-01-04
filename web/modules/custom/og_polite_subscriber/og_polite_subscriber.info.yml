@@ -1,0 +1,9 @@
+name: Organic Groups Polite Subscriber
+type: module
+description: Offers to subscribe visitors to organic groups.
+package: Organic Groups
+core_version_requirement: ^8.9 || ^9
+
+dependencies:
+  - og
+  - drupal:user
