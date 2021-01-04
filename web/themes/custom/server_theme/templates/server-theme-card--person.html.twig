@@ -1,0 +1,38 @@
+<div class="card-item flex flex-col h-80 w-80 pt-8 shadow rounded">
+
+  <img class="rounded-full align-center w-32 h-32" src="{{ image }}" alt="{{ image_alt }}" />
+
+  <div class="flex flex-col justify-between h-full py-4">
+    <div class="text-sm leading-5 font-medium align-center text-gray-900">
+        {{ name }}
+    </div>
+
+    {% if tagline %}
+      <div class="text-sm leading-5 font-normal text-gray-500 align-center mt-1">
+        {{ tagline }}
+    </div>
+    {% endif %}
+
+    {% if role %}
+      <div class="text-xs leading-4 font-medium align-center rounded-full mt-3 py-1 px-2 bg-green-100 text-green-800">
+        {{ role }}
+      </div>
+    {% endif %}
+
+    <div class="flex flex-row flex-wrap justify-around py-4 my-4 text-sm border-t border-gray-200">
+      <div class="text-gray-700 text-sm leading-5 font-medium"><a href="mailto:{{ email }}">
+        <svg class="inline mr-3" width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.753 1.884L8.75 5.882L16.747 1.884C16.7174 1.37444 16.4941 0.895488 16.1228 0.545227C15.7516 0.194965 15.2604 -9.35847e-05 14.75 3.36834e-08H2.75C2.23958 -9.35847e-05 1.74845 0.194965 1.37718 0.545227C1.00591 0.895488 0.782604 1.37444 0.753 1.884Z" fill="#9CA3AF"/>
+          <path d="M16.75 4.118L8.75 8.118L0.75 4.118V10C0.75 10.5304 0.960714 11.0391 1.33579 11.4142C1.71086 11.7893 2.21957 12 2.75 12H14.75C15.2804 12 15.7891 11.7893 16.1642 11.4142C16.5393 11.0391 16.75 10.5304 16.75 10V4.118Z" fill="#9CA3AF"/>
+        </svg>
+        Email
+      </a></div>
+      <div class="text-gray-700 text-sm leading-5 font-medium"><a href="tel:{{ phone }}">
+        <svg class="inline mr-3" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M0.25 1C0.25 0.447715 0.697715 0 1.25 0H3.40287C3.89171 0 4.3089 0.353413 4.38927 0.835601L5.12858 5.27147C5.20075 5.70451 4.98206 6.13397 4.5894 6.3303L3.04126 7.10437C4.15756 9.87832 6.37168 12.0924 9.14563 13.2087L9.9197 11.6606C10.116 11.2679 10.5455 11.0492 10.9785 11.1214L15.4144 11.8607C15.8966 11.9411 16.25 12.3583 16.25 12.8471V15C16.25 15.5523 15.8023 16 15.25 16H13.25C6.0703 16 0.25 10.1797 0.25 3V1Z" fill="#9CA3AF"/>
+        </svg>
+        Call
+        </a></div>
+    </div>
+  </div>
+</div>

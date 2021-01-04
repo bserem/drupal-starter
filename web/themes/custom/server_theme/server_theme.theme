@@ -59,6 +59,33 @@ function server_theme_theme($existing, $type, $theme, $path) {
     ],
   ];
 
+  // Multiple cards: wide margin on mobiles.
+  $info['server_theme_cards__wide'] = [
+    'variables' => [
+      // Optional title.
+      'title' => NULL,
+      // A list of the view's row items.
+      // - attributes: The row's HTML attributes.
+      // - content: The row's content.
+      // This is copied from Views, so we could easily have Views list wired to
+      // this theme.
+      'rows' => [],
+    ],
+  ];
+
+  // Person card.
+  $info['server_theme_card__person'] = [
+    'variables' => [
+      'image' => NULL,
+      'image_alt' => NULL,
+      'name' => 'Jane Cooper',
+      'tagline' => 'Paradigm Representative',
+      'role' => 'Admin',
+      'email' => NULL,
+      'phone' => NULL,
+    ],
+  ];
+
   // Content tags.
   $info['server_theme_content__tags'] = [
     'variables' => [
@@ -124,7 +151,6 @@ function server_theme_theme($existing, $type, $theme, $path) {
     ],
   ];
 
-
   return $info;
 }
 
@@ -155,5 +181,5 @@ function server_theme_preprocess_page_title(&$variables) {
  * Use our own page title theme.
  */
 function server_theme_theme_suggestions_page_title_alter(array &$suggestions, array $variables) {
-    $suggestions[] = 'server_theme_page_title';
+  $suggestions[] = 'server_theme_page_title';
 }

@@ -105,6 +105,34 @@ class StyleGuideController extends ControllerBase {
     $single_card_long_author_name = $single_card_simple;
     $single_card_long_author_name['#author'] = 'Someone with A. Very long name';
 
+    $person = [
+      '#theme' => 'server_theme_card__person',
+      '#image' => $this->getPlaceholderPersonImage(128, 128),
+      '#image_alt' => 'Bill Murray',
+      '#name' => 'Bill',
+      '#tagline' => 'Drupal Implementor',
+      '#role' => 'Undecided',
+      '#email' => 'bill@example.com',
+      '#phone' => '555-7042',
+    ];
+    $rows = [];
+    for ($p = 0; $p < 10; $p++) {
+      $rows[] = [
+        'content' => $person,
+        'attributes' => [],
+      ];
+    }
+
+    $person['#prefix'] = $this->getComponentPrefix('Person Card');
+    $element['server_theme_person_card'] = $person;
+
+    $element['server_theme_person_cards'] = [
+      '#prefix' => $this->getComponentPrefix('Multiple Person Cards - With Title'),
+      '#theme' => 'server_theme_cards__wide',
+      '#title' => $this->t('Meet the team'),
+      '#rows' => $rows,
+    ];
+
     $cards = [
       $single_card_simple,
       $single_card_no_body,
