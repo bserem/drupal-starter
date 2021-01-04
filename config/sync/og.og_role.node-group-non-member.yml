@@ -1,0 +1,16 @@
+uuid: 1bedd051-9224-46e5-b5ca-2118e1c47689
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.group
+id: node-group-non-member
+label: Non-member
+weight: null
+is_admin: null
+group_type: node
+group_bundle: group
+group_id: null
+permissions:
+  - subscribe
+role_type: required

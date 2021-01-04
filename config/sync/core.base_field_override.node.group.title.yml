@@ -1,0 +1,18 @@
+uuid: 3227a498-fd85-4bcf-b8a5-a73b3e6c8424
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.group
+id: node.group.title
+field_name: title
+entity_type: node
+bundle: group
+label: 'Group Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

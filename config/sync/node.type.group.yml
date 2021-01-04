@@ -1,0 +1,17 @@
+uuid: b61634f6-da6a-4cc5-9346-a71cd3946bea
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Group
+type: group
+description: 'Use <em>group</em> to create <em>organic groups</em> which <strong>can contain content and have members</strong>.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,5 +1,7 @@
 group_manager_full_access: true
-groups: {  }
+groups:
+  node:
+    - group
 node_access_strict: true
 delete_orphans: false
 delete_orphans_plugin_id: simple
