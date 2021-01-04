@@ -1,18 +1,18 @@
 <?php
 
-namespace Drupal\Tests\og_polite_subscriber\Block;
+namespace Drupal\Tests\og_polite_subscriber\Formatter;
 
 use weitzman\DrupalTestTraits\ExistingSiteBase;
 
 /**
- * A model test case using traits from Drupal Test Traits.
+ * Test OGF subscribe message override using traits from Drupal Test Traits.
  */
-class PoliteBlockTest extends ExistingSiteBase {
+class PoliteSubscribeTest extends ExistingSiteBase {
 
   /**
-   * Tests visibility and correctness of og_polite_subscriber block
+   * Tests visibility and correctness of og_polite_subscriber block.
    */
-  public function testBlock() {
+  public function testPoliteSubscribe() {
     // Creates a user. Will be automatically cleaned up at the end of the test.
     $author = $this->createUser();
 
@@ -30,8 +30,9 @@ class PoliteBlockTest extends ExistingSiteBase {
     $this->drupalLogin($visitor);
     $this->drupalGet($node->toUrl());
     $this->assertSession()->statusCodeEquals(200);
-    $this->assertSession()->pageTextContains('click here if you would like to subscribe to this group called Mountains');
-    $this->assertSession()->elementAttributeContains('css', '.og-polite-link', 'href', '/group/node/' . $node->id() . '/subscribe');
+    $this->assertSession()->pageTextContains('Hello ' . $visitor->getUsername() . ', click here if you would like to subscribe to this group called Mountains');
+    // Probably overkill since it comes from OG: test subscription link.
+    $this->assertSession()->elementAttributeContains('css', '.field--name-og-group .field__item a', 'href', '/group/node/' . $node->id() . '/subscribe');
   }
 
 }
